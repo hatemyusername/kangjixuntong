@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>设备管理系统 - 查询</title>
+    <link rel="stylesheet" href="style-query.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav-container">
+        <img src="kangji.jpg" alt="康吉讯通图标" class="image-p2" />
+        <p class="yonghuming">登录用户：bpps</p>
+        <p class="tuichu">退出</p>
+      </div>
+
+      <div class="query-container">
+        <div class="bianlan-container">
+          <p class="chuanganqi">多要素传感器</p>
+          <p class="qixiangzhan">小型气象站</p>
+        </div>
+        <div class="input-section">
+          <h2>查询条件</h2>
+          <div class="input-group">
+            <label for="machineSelect">设备编号</label>
+            <select id="machineSelect" class="form-control"></select>
+          </div>
+
+          <div class="input-group">
+            <label for="startDate">起始日期</label>
+            <input type="text" id="startDate" placeholder="YYYY-MM-DD" />
+          </div>
+
+          <div class="input-group">
+            <label for="endDate">结束日期</label>
+            <input type="text" id="endDate" placeholder="YYYY-MM-DD" />
+          </div>
+
+          <div class="btn-group">
+            <button id="searchBtn" class="btn-primary" disabled>查询</button>
+            <button id="downloadBtn" class="btn-secondary" disabled>
+              下载
+            </button>
+          </div>
+
+          <div
+            id="loading"
+            style="display: none; text-align: center; margin-top: 20px"
+          >
+            <p>加载数据中...</p>
+          </div>
+        </div>
+
+        <div class="result-section">
+          <h2>查询结果</h2>
+          <div id="resultContainer" class="result-container">
+            <div class="no-data">请输入查询条件并点击"查询"按钮</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
