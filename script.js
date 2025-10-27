@@ -70,9 +70,9 @@ function initQueryPage() {
   createMachineSelect();
   loadExcelData();
   document.getElementById("searchBtn").addEventListener("click", performSearch);
-  document.getElementById("downloadBtn").addEventListener("click", function () {
-    alert("下载功能尚未实现，仅作演示");
-  });
+  /*document.getElementById("downloadBtn").addEventListener("click", function () {
+    alert("NaN");
+  });*/
 }
 
 function createMachineSelect() {
