@@ -1,3 +1,8 @@
+/*
+* {
+  border: 1px solid black;
+}*/
+
 /* 查询页面样式 */
 html {
   height: 100vh;
@@ -31,23 +36,25 @@ body {
 
 .image-p2 {
   display: flex;
-  width: 70%;
+  width: 20%;
   height: auto; /* 高度自动调整，保持比例 */
-  padding: 0px 320px 0px 320px;
+  padding: 2px 300px 0px 300px;
 }
 
 .yonghuming {
-  width: 15%;
-  height: 100%;
-  text-align: center;
-  padding-top: 40px;
+  width: 40%;
+  height: 90px;
+  margin: 0;
   font-weight: 600;
-  font-size: large;
+  text-align: center;
+  padding-top: 30px;
 }
 
 .tuichu {
-  width: 15%;
-  height: 100%;
+  width: 40%;
+  height: 90px;
+  margin: 0;
+  padding: 0;
   text-align: center;
   padding-top: 40px;
   padding-right: 50px;
@@ -135,6 +142,10 @@ body {
   border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 15px;
+}
+
+.input-group input {
+  max-width: 434px;
 }
 
 .btn-group {
@@ -253,4 +264,34 @@ tr:hover {
   position: sticky;
   top: 0;
   z-index: 10;
+}
+
+.tuichu {
+  padding: 0;
+  text-align: center;
+  padding-top: 30px;
+  padding-right: 70px;
+}
+
+a {
+  /* 核心重置：去除下划线和默认颜色 */
+  text-decoration: none;
+  color: inherit; /* 继承父元素颜色，避免默认蓝色 */
+
+  /* 移除点击状态的视觉反馈（移动端/桌面端） */
+  -webkit-tap-highlight-color: transparent; /* 移动端点击高亮 */
+  outline: none; /* 移除焦点框（键盘导航时） */
+
+  /* 确保所有状态保持一致 */
+  transition: none; /* 禁用过渡动画 */
+}
+
+/* 重置所有伪类状态 */
+a:hover,
+a:active,
+a:visited {
+  text-decoration: none;
+  color: inherit;
+  background: none; /* 移除背景色 */
+  outline: none;
 }
